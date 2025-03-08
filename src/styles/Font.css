@@ -1,0 +1,47 @@
+@font-face{
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 200;
+    src: url("src/assets/fonts/Gabarito-Regular.ttf");
+}
+@font-face{
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 400;
+    src: url("src/assets/fonts/Gabarito-Medium.ttf");
+}
+@font-face{
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 600;
+    src: url("src/assets/fonts/Gabarito-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 800;
+    src: url("src/assets/fonts/Gabarito-Bold.ttf");
+}
+@font-face{
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 1000;
+    src: url("src/assets/fonts/Gabarito-ExtraBold.ttf");
+}
+
+:root {
+    font-family: Gabarito, sans-serif;
+    line-height: 1.5;
+    /*font-weight: 400;*/
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
