@@ -1,0 +1,21 @@
+.window-container{
+    width: 50%;
+    height: 50%;
+    background-color: var(--window-background-color);
+    border-radius: 10px;
+    border: var(--border-size) solid var(--border-color);
+    box-shadow: var(--box-shadow-color) 1px 1px 1px;
+}
+
+.window-header{
+    border-bottom: var(--border-size) solid var(--border-color);
+    background-color: var(--window-1-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.window-header > * {
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+}

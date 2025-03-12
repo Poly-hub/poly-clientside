@@ -1,8 +1,22 @@
 :root{
-    --background-color: #CD2E3E;
-    --text-color: #ffffff;
-    /*--border-color: salmon;*/
-    /*--border-radius: 10px;*/
+
+    --window-1-color: #FE8D87;
+    --window-2-color: #FC9405;
+    --window-3-color: #EE632C;
+    --window-4-color: #FFC107;
+    --window-5-color: #00BA85;
+    --window-6-color: #05A8C5;
+    --window-7-color: #D5D600;
+    --window-8-color: #FFCC74;
+
+    --window-background-color: #F3EDDA;
+    --background-color: hsl(220, 100%, 83%);
+    --box-shadow-color: #5B3519;
+    --border-color: #5B3519;
+    --border-size: 2px;
+
+    --text-color: #5B3519;
+    --symbols-color: #5B3519;
 
     --margin-start: 20px;
     --margin-end: 20px;
@@ -11,8 +25,6 @@
     --font-size-medium: 1.3rem;
     --font-size-large: 1.5rem;
     --font-size-very-large: 2rem;
-    --font-size-h1: 6rem;
-    --font-size-h2: 2rem;
 
     --font-weight-light: 200;
     --font-weight-regular: 400;

@@ -1,0 +1,27 @@
+.gradient-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.gradient-ball {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    will-change: transform, opacity;
+    animation: moving-gradient infinite ease-in-out alternate;
+}
+
+/*@keyframes moving-gradient {*/
+/*    0% {*/
+/*        transform: translate(0%, 0%);*/
+/*    }*/
+/*    50% {*/
+/*        transform: translate(-10%, 10%);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translate(30%, -30%);*/
+/*    }*/
+/*}*/

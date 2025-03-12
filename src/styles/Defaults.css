@@ -1,24 +1,21 @@
-#root {
-    margin: 0;
-    text-align: center;
-    direction: rtl;
+/*label{*/
+/*    font-size: var(--font-size-medium);*/
+/*    font-weight: var(--font-weight-medium);*/
+/*}*/
+img {
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--box-shadow-color) 1px 1px 1px;
 }
-
-h1 {
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-semi-bold);
-    margin: 0;
-    padding: 0;
-}
-h2 {
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-semi-bold);
-    margin: 0;
-    padding: 0;
-}
-
 .flex{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+svg:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+svg{
+    transition: scale .2s ease-in-out;
 }
