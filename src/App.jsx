@@ -1,6 +1,7 @@
 import './App.css'
 import GradientBackground from "./components/GradientBackground/GradientBackground.jsx";
 import About from "./Pages/About/About.jsx";
+import Window from "./components/Window/Window.jsx";
 
 function App() {
 

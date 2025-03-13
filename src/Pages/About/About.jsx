@@ -1,18 +1,12 @@
 import './About.css'
 import useResponsiveClass from "../../hooks/Responsive/useResponsiveClass.js";
+import Window from "../../components/Window/Window.jsx";
 export default function About() {
 
     const responsiveClass = useResponsiveClass("about");
-
-    return(
-        <div className={`about-container ${responsiveClass} window-container`}>
-            <div className={"about-header window-header"}>
-                <label>About</label>
-                <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--symbols-color)"
-                          d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"/>
-                </svg>
-            </div>
+    const header = "About"
+    function aboutContent() {
+        return(
             <div className={`about-content window-content`}>
                 <img className={"profile-picture"} id={"grid-item-1"} src={"/images/profile.png"}
                      alt={"profile-picture"}/>
@@ -77,8 +71,10 @@ export default function About() {
                     <label>Open to roles in frontend, full-stack, or graphics software development.</label>
                 </div>
             </div>
+        )
+    }
 
-
-        </div>
+    return(
+        <Window header={header} content={aboutContent()} windowWidth={"90%"} windowHeight={"60%"} responsiveClass={responsiveClass} headerColor={"var(--window-6-color)"}/>
     )
 }

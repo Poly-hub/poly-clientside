@@ -24,9 +24,6 @@
 /*---------------------*/
 
 /*general reset styles*/
-.window-content, .window-header{
-    text-indent: 0.5rem;
-}
 .about-title, .about-location, .about-socials{
     justify-content: left;
     grid-column: 2;
