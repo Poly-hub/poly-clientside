@@ -1,0 +1,30 @@
+DONE:
+- Color Variables - according to a theme
+- Font Size Variables
+- Custom Font
+- Gradient Background - in its own component
+- About page
+- Responsive Design:
+    - Custom hook to know which screen size im on
+    - Custom hook to give me a classname suffix based of screen size
+    - General CSS rules for each screen size:
+        - Font size
+        - Images size
+        - Window size
+- Window design
+    - component for a window that should have:
+        - header - like the pink about header
+        - content
+    - dragging windows
+TODO:
+
+- Window design
+    - minimize button
+    - closing windows
+    - opening windows - for now only the about page and scale later
+- Taskbar:
+    - Start Button
+    - Clock
+    - Minimized App
+- Paint app
+-

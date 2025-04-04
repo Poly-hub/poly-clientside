@@ -1,6 +1,15 @@
 :root{
 
-    --window-1-color: #FE8D87;
+    /*general window variables*/
+    --window-background-color: rgba(243, 237, 218, 0.5);
+    --window-default-width: 60%;
+    --window-default-height: 90%;
+    --window-header-height: 2.5rem;
+    --window-content-height: calc(100% - var(--margin-end));
+    --window-content-width: calc(100% - var(--margin-end));
+
+    /*windows header colors*/
+    --window-1-color: #fe8d87;
     --window-2-color: #FC9405;
     --window-3-color: #EE632C;
     --window-4-color: #FFC107;
@@ -8,15 +17,33 @@
     --window-6-color: #05A8C5;
     --window-7-color: #D5D600;
     --window-8-color: #FFCC74;
+    /*------------------------*/
 
-    --window-background-color: #F3EDDA;
+    /*taskbar variables*/
+    --taskbar-background-color: transparent;
+    --taskbar-size: 3rem;
+    --taskbar-app-icon-size: 2rem;
+    --taskbar-app-font-size: 1.1rem;
+    /*------------------------*/
+
+
+    /*desktop variables*/
+    --desktop-window-container-size: calc(100% - var(--taskbar-size));
+    --desktop-app-icon-size: 4rem;
+    /*------------------------*/
+
     --background-color: hsl(220, 100%, 83%);
-    --box-shadow-color: #5B3519;
-    --border-color: #5B3519;
+    --brown: #5B3519;
+    --box-shadow-color: var(--brown);
+    --border-color: var(--brown);
     --border-size: 2px;
 
-    --text-color: #5B3519;
-    --symbols-color: #5B3519;
+    --text-color: var(--brown);
+    --symbols-color: var(--brown);
+
+    --scrollbar-handle-color: var(--brown);
+    --scrollbar-background-color: var(--window-background-color);
+
 
     --margin-start: 20px;
     --margin-end: 20px;
@@ -31,5 +58,6 @@
     --font-weight-medium: 600;
     --font-weight-semi-bold: 800;
     --font-weight-bold: 1000;
+
 
 }

@@ -1,11 +1,59 @@
+.window-container {
+    position: absolute;
+    width: var(--window-default-width);
+    height: var(--window-default-height);
+    background-color: var(--window-background-color);
+    border-radius: 10px;
+    border: var(--border-size) solid var(--border-color);
+    box-shadow: 2px 1px 5px var(--box-shadow-color);
+    backdrop-filter: blur(5px);
+    /*transition: transform 0.1s ease-in-out;*/
+}
 .window-header{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 100%;
-    height: 6%;
+    height: var(--window-header-height);
     border-radius: 8px 8px 0 0;
     font-weight: var(--font-weight-medium);
-    z-index: -1;
+    cursor: grab;
+    border-bottom: var(--border-size) solid var(--border-color);
+    background-color: var(--window-1-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: opacity(0.5);
+
+}
+.window-header > * {
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+}
+
+.window-header:active{
+    cursor: grabbing;
 }
 .window-header{
     text-indent: 0.5rem;
+}
+.window-header-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+.window-header-controls-toggle{
+    text-align: center;
+    transition: scale .2s ease-in-out;
+    margin:0;
+    padding: 0;
+    background: transparent;
+    border: transparent;
+}
+.window-header-controls-toggle:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+.window-content{
+    height: var(--window-content-height);
+    padding:0;
 }

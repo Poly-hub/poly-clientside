@@ -1,18 +1,57 @@
 import "./Window.css"
-export default function Window({header, headerColor,windowWidth, windowHeight, responsiveClass ,content}) {
-    return(
-        <div className={`window-container ${responsiveClass}`} style={{width: windowWidth, height: windowHeight,}}>
-            <div className={"window-header"} style={{backgroundColor: headerColor,}}>
-                {header}
-                <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--symbols-color)"
-                          d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"/>
-                </svg>
-            </div>
-            <div className={"window-content"}>
-                {content}
-            </div>
-        </div>
+import useDraggable from "../../hooks/useDraggable.js"
+import {CLOSE_SVG, MINIMIZE_SVG} from "../../Constants/SvgConstants.jsx";
+export default function Window({
+                                   desktopWidth,
+                                   desktopHeight,
+                                   header,
+                                   headerColor,
+                                   windowWidth,
+                                   windowHeight,
+                                   responsiveClass ,
+                                   content,
+                                   onClose,
+                                   onMinimize,
+                               }) {
 
+    const { position, startDragging } = useDraggable(
+        desktopWidth, desktopHeight, windowWidth, windowHeight);
+
+    return(
+        <div className={`window-container ${responsiveClass}`}
+             style={{
+                 minWidth: windowWidth,
+                 minHeight: windowHeight,
+                 transform: `translate(${position.x}px,${position.y}px)`
+             }}
+        >
+
+            <div className={"window-header"}
+                 style={{backgroundColor: headerColor,}}
+                 onMouseDown={startDragging}>
+                {header}
+                <div className={"window-header-controls"}>
+                    <button
+                        className={"window-header-controls-toggle"}
+                        id={"minimize-button"}
+                        onClick={()=>onMinimize(header)}
+                        aria-label={"Minimize window"}
+                    >
+                        {MINIMIZE_SVG}
+                    </button>
+
+                    <button
+                        className={"window-header-controls-toggle"}
+                        id={"close-button"}
+                        onClick={()=>onClose(header)}
+                        aria-label={"Close window"}
+                    >
+                        {CLOSE_SVG}
+                    </button>
+                </div>
+
+            </div>
+            <div className={"window-content"}>{content}</div>
+        </div>
     )
 }

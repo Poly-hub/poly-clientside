@@ -16,24 +16,25 @@ export default function GradientBackground() {
 
     return(
         <div className={"gradient-container"}>
-            {gradientBalls.map((ball) => {
-                return (
-                    <div
-                        key={ball.id}
-                        className={"gradient-ball"}
-                        style={{
-                            background: `radial-gradient(circle, ${ball.color} 50px, transparent 50%`,
-                            top: ball.top,
-                            left: ball.left,
-                            animationDuration: ball.duration,
-                            width: `${ball.size}vw`,
-                            height: `${ball.size}vh`,
+            {/*<img className={"gradient-background"} src={"/images/background.png"} alt={"background"} />*/}
+            {/*{gradientBalls.map((ball) => {*/}
+            {/*    return (*/}
+            {/*        <div*/}
+            {/*            key={ball.id}*/}
+            {/*            className={"gradient-ball"}*/}
+            {/*            style={{*/}
+            {/*                background: `radial-gradient(circle, ${ball.color} 50px, transparent 50%`,*/}
+            {/*                top: ball.top,*/}
+            {/*                left: ball.left,*/}
+            {/*                animationDuration: ball.duration,*/}
+            {/*                width: `${ball.size}vw`,*/}
+            {/*                height: `${ball.size}vh`,*/}
 
-                        }}
-                    />
+            {/*            }}*/}
+            {/*        />*/}
 
-                )
-            })}
+            {/*    )*/}
+            {/*})}*/}
         </div>
     )
 

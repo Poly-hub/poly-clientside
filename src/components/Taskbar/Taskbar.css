@@ -1,0 +1,60 @@
+.taskbar-container{
+    width: 100%;
+    height: var(--taskbar-size);
+    background: var(--taskbar-background-color);
+    flex-direction: row;
+    justify-content: space-between;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    /*border-radius: 16px;*/
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding-inline-start: var(--margin-start);
+    padding-inline-end: var(--margin-end);
+    gap: var(--margin-start);
+}
+.taskbar-icon{
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 10%;
+}
+.taskbar-clock{
+    width: 10%;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    justify-content: end;
+}
+.taskbar-apps-container{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    /*overflow-y: hidden;*/
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.taskbar-app{
+    position: relative;
+    cursor: pointer;
+    gap: 0.3rem;
+    font-size: var(--taskbar-app-font-size);
+}
+.taskbar-app svg {
+    width: var(--taskbar-app-icon-size);
+    height: var(--taskbar-app-icon-size);
+}
+
+.taskbar-app:hover{
+    opacity: 0.8;
+}
+#app-1{
+    align-self: center;
+    justify-self: center;
+}

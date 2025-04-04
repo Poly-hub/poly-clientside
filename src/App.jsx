@@ -1,7 +1,6 @@
 import './App.css'
 import GradientBackground from "./components/GradientBackground/GradientBackground.jsx";
-import About from "./Pages/About/About.jsx";
-import Window from "./components/Window/Window.jsx";
+import Desktop from "./Pages/Desktop/Desktop.jsx";
 
 function App() {
 
@@ -11,7 +10,7 @@ function App() {
         {/*<h1 className={"title"}>Poly</h1>*/}
         {/*/!*<h2></h2>*!/*/}
         {/*<h2>Code, Create, Compose</h2>*/}
-        <About/>
+        <Desktop/>
     </div>
   )
 }
