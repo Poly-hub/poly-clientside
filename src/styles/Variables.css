@@ -44,6 +44,14 @@
     --scrollbar-handle-color: var(--brown);
     --scrollbar-background-color: var(--window-background-color);
 
+    --tab-font-color: var(--brown);
+    --tab-border-color: var(--brown);
+    --tab-font-size: var(--font-size-medium);
+    --tab-activated-background: var(--brown);
+    --tab-activated-text-color: white;
+    --tab-deactivated-background: white;
+    --tab-deactivated-text-color: var(--brown);
+
 
     --margin-start: 20px;
     --margin-end: 20px;
@@ -59,5 +67,5 @@
     --font-weight-semi-bold: 800;
     --font-weight-bold: 1000;
 
-
+    --border-radius: .5rem;
 }
