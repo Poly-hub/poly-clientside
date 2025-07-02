@@ -72,13 +72,14 @@ export default function About() {
                     <Tabs tabs={[
                         {
                             id: 1,
-                            name: "Bio",
-                            content: bioParagraph(),
+                            name: "Experience",
+                            content: experienceParagraph(),
                         },
                         {
                             id: 2,
-                            name: "Experience",
-                            content: experienceParagraph(),
+                            name: "Bio",
+                            content: bioParagraph(),
+
                         }
                     ]}/>
                     {/*{bioParagraph()}*/}
