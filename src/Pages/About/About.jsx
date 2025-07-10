@@ -1,12 +1,12 @@
 import './About.css'
 import useResponsiveClass from "../../hooks/Responsive/useResponsiveClass.js";
-import Window from "../../components/Window/Window.jsx";
 import {GITHUB_SVG, INSTAGRAM_SVG, ISRAEL_FLAG_SVG, LINKEDIN_SVG} from "../../Constants/SvgConstants.jsx";
 import Tabs from "../../components/Tabs/Tabs.jsx";
 
 export default function About() {
 
     const responsiveClass = useResponsiveClass("about");
+
     function bioParagraph() {
         return(
             <div className={"about-paragraph flex"}>
@@ -22,7 +22,6 @@ export default function About() {
                 <h3>✨ Let's Connect</h3>
                 <p>Currently working on projects that blend creativity with deep tech. Always open to opportunities that challenge and inspire.</p>
             </div>
-
         )
     }
     function experienceParagraph() {
@@ -42,7 +41,7 @@ export default function About() {
     }
 
         return(
-            <div className={`about-content window-content ${responsiveClass}`}>
+            <div className={`about-content ${responsiveClass}`}>
                 <img className={"profile-picture"} id={"grid-item-1"} src={"/images/profile.png"}
                      alt={"profile-picture"}/>
                 <div className={"about-title flex"} id={"grid-item-2"}>
@@ -79,10 +78,8 @@ export default function About() {
                             id: 2,
                             name: "Bio",
                             content: bioParagraph(),
-
                         }
                     ]}/>
-                    {/*{bioParagraph()}*/}
                 </div>
             </div>
         )

@@ -1,6 +1,7 @@
 import "./Window.css"
 import useDraggable from "../../hooks/useDraggable.js"
 import {CLOSE_SVG, MINIMIZE_SVG} from "../../Constants/SvgConstants.jsx";
+import useResponsiveClass from "../../hooks/Responsive/useResponsiveClass.js";
 export default function Window({
                                    desktopWidth,
                                    desktopHeight,
@@ -8,7 +9,6 @@ export default function Window({
                                    headerColor,
                                    windowWidth,
                                    windowHeight,
-                                   responsiveClass ,
                                    content,
                                    onClose,
                                    onMinimize,
@@ -16,6 +16,7 @@ export default function Window({
 
     const { position, startDragging } = useDraggable(
         desktopWidth, desktopHeight, windowWidth, windowHeight);
+    const responsiveClass = useResponsiveClass("window");
 
     return(
         <div className={`window-container ${responsiveClass}`}

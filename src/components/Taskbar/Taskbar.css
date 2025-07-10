@@ -45,6 +45,7 @@
     cursor: pointer;
     gap: 0.3rem;
     font-size: var(--taskbar-app-font-size);
+    transition: all .1s ease-in-out;
 }
 .taskbar-app svg {
     width: var(--taskbar-app-icon-size);
@@ -52,9 +53,10 @@
 }
 
 .taskbar-app:hover{
-    opacity: 0.8;
+    opacity: 0.4;
 }
 #app-1{
     align-self: center;
     justify-self: center;
 }
+

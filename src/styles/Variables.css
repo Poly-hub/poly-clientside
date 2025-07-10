@@ -2,8 +2,13 @@
 
     /*general window variables*/
     --window-background-color: rgba(243, 237, 218, 0.5);
-    --window-default-width: 60%;
-    --window-default-height: 90%;
+    --window-default-width-desktop: 80%;
+    --window-default-width-tablet: 100%;
+    --window-default-width-mobile: 100%;
+    --window-default-height-desktop: 90%;
+    --window-default-height-tablet: 95%;
+    --window-default-height-mobile: 95%;
+
     --window-header-height: 2.5rem;
     --window-content-height: calc(100% - var(--margin-end));
     --window-content-width: calc(100% - var(--margin-end));

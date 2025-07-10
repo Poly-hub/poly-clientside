@@ -15,11 +15,9 @@ export default function Tabs({tabs}){
                 ))}
             </div>
 
-            {tabs.map((tab, index) => (
-                <div key={index}>
-                    {(activeTab === tab.id) &&tab.content}
-                </div>
-            ))}
+            <div className={'tabs-content'}>
+                {tabs.find(tab => tab.id === activeTab)?.content}
+            </div>
         </div>
     )
 

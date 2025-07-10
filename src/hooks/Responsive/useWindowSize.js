@@ -7,11 +7,15 @@ export default function useWindowSize() {
     });
 
     useEffect(() => {
+        let timeoutId = null;
         function handleWindowSizeChange() {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                });
+            }, 150);
         }
         window.addEventListener('resize', handleWindowSizeChange);
         return () => {

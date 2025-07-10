@@ -1,12 +1,13 @@
 import "./Taskbar.css"
 import {useEffect, useState} from "react";
+import useResponsiveClass from "../../hooks/Responsive/useResponsiveClass.js";
 export default function Taskbar({openedApps, dispatch, handleRestoreApp}) {
 
-    const [clock, setClock] = useState(new Date().toLocaleTimeString())
-
+    const [clock, setClock] = useState(Intl.DateTimeFormat("en-US",{hour:"2-digit",hour12:false,minute:"2-digit"}).format(new Date()));
+    const responsiveClass = useResponsiveClass('taskbar');
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setClock(new Date().toLocaleTimeString())
+            setClock(Intl.DateTimeFormat("en-US",{hour:"2-digit",hour12:false,minute:"2-digit"}).format(new Date()))
         }, 1000)
         return () => clearInterval(intervalId)
     },[])
@@ -40,7 +41,7 @@ export default function Taskbar({openedApps, dispatch, handleRestoreApp}) {
                 }
             </div>
 
-            <div className={"taskbar-clock flex"}>
+            <div className={`taskbar-clock flex ${responsiveClass}`}>
                 <label aria-label={"Clock"}> {clock}</label>
             </div>
 

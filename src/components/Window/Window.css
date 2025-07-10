@@ -1,14 +1,27 @@
 .window-container {
     position: absolute;
-    width: var(--window-default-width);
-    height: var(--window-default-height);
     background-color: var(--window-background-color);
     border-radius: 10px;
     border: var(--border-size) solid var(--border-color);
     box-shadow: 2px 1px 5px var(--box-shadow-color);
     backdrop-filter: blur(5px);
-    /*transition: transform 0.1s ease-in-out;*/
+    transition: all 0.3s ease-in-out;
 }
+.window-desktop{
+    width: var(--window-default-width-desktop);
+    height: var(--window-default-height-desktop);
+}
+.window-tablet{
+    width: var(--window-default-width-tablet);
+    height: var(--window-default-height-tablet);
+
+}
+.window-mobile{
+    width: var(--window-default-width-mobile);
+    height: var(--window-default-height-mobile);
+
+}
+
 .window-header{
     font-size: 1.3rem;
     width: 100%;
@@ -22,6 +35,7 @@
     align-items: center;
     justify-content: space-between;
     backdrop-filter: opacity(0.5);
+    flex-shrink: 0;
 
 }
 .window-header > * {
@@ -54,6 +68,10 @@
     cursor: pointer;
 }
 .window-content{
+    flex: 1;
     height: var(--window-content-height);
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
     padding:0;
 }
