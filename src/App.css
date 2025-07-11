@@ -7,6 +7,9 @@
   height: 100vh;
   overflow: hidden;
 }
+.app-mobile{
+  height: 100dvh;
+}
 .title{
   letter-spacing: .4rem;
 }

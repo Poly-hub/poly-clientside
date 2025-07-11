@@ -17,19 +17,20 @@ export default function Window({
     const { position, startDragging } = useDraggable(
         desktopWidth, desktopHeight, windowWidth, windowHeight);
     const responsiveClass = useResponsiveClass("window");
+    const isMobile = responsiveClass === "window-mobile";
 
     return(
         <div className={`window-container ${responsiveClass}`}
              style={{
-                 minWidth: windowWidth,
-                 minHeight: windowHeight,
-                 transform: `translate(${position.x}px,${position.y}px)`
+                 minWidth: isMobile ? undefined : windowWidth,
+                 minHeight: isMobile ? undefined : windowHeight,
+                 transform: isMobile ? undefined : `translate(${position.x}px,${position.y}px)`
              }}
         >
 
             <div className={"window-header"}
                  style={{backgroundColor: headerColor,}}
-                 onMouseDown={startDragging}>
+                 onMouseDown={isMobile ? undefined : startDragging}>
                 {header}
                 <div className={"window-header-controls"}>
                     <button

@@ -1,25 +1,33 @@
 .window-container {
-    position: absolute;
     background-color: var(--window-background-color);
     border-radius: 10px;
     border: var(--border-size) solid var(--border-color);
     box-shadow: 2px 1px 5px var(--box-shadow-color);
     backdrop-filter: blur(5px);
-    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 .window-desktop{
+    position: absolute;
     width: var(--window-default-width-desktop);
     height: var(--window-default-height-desktop);
 }
 .window-tablet{
+    position: absolute;
     width: var(--window-default-width-tablet);
     height: var(--window-default-height-tablet);
 
 }
 .window-mobile{
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: var(--taskbar-size);
     width: var(--window-default-width-mobile);
-    height: var(--window-default-height-mobile);
-
+    height: calc(100dvh - var(--taskbar-size));
+    /*height: 100dvh;*/
+    transform: none !important;
+    margin-bottom: 0.5rem;
 }
 
 .window-header{
@@ -69,9 +77,9 @@
 }
 .window-content{
     flex: 1;
-    height: var(--window-content-height);
     flex-direction: column;
     overflow: hidden;
     min-height: 0;
-    padding:0;
+    padding: 0;
+    height: var(--window-content-height);
 }

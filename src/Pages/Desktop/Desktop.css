@@ -4,6 +4,7 @@
     position: relative;
     /*display:grid*/
 }
+
 .windows-panel{
     width: 100%;
     height: var(--desktop-window-container-size);
